@@ -1,0 +1,32 @@
+{
+  "name": "petshop-sao-francisco",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "lucide-react": "^1.33.0",
+    "next": "^16.3.2",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@testing-library/react": "^16.3.2",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "eslint": "^9.16.0",
+    "eslint-config-next": "^16.3.2",
+    "jsdom": "^30.0.1",
+    "typescript": "^5.7.0",
+    "vitest": "^4.1.11"
+  }
+}
