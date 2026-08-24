@@ -8,7 +8,7 @@ Site institucional e catálogo com conversão via WhatsApp, construído em Next.
 2. Preencha `NEXT_PUBLIC_WHATSAPP_NUMBER` somente com números (DDI + DDD + número).
 3. Execute `npm install` e `npm run dev`.
 
-Antes do deploy, informe também `NEXT_PUBLIC_SITE_URL` com o domínio público.
+`NEXT_PUBLIC_SITE_URL` é opcional na Vercel, que fornece automaticamente a URL do projeto. Para usar um domínio próprio como URL canônica, configure a variável com a URL completa (por exemplo, `https://dominio.com.br`, sem caminho).
 
 ## Dados editáveis
 

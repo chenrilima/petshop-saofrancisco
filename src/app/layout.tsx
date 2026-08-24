@@ -1,18 +1,19 @@
 import type { Metadata, Viewport } from "next";
 import { Manrope, Playfair_Display } from "next/font/google";
-import { businessConfig, siteUrl } from "@/data/business";
+import { businessConfig } from "@/data/business";
+import { isLocalSiteUrl, siteUrl } from "@/lib/site-url";
 import "./globals.css";
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-serif", display: "swap" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: siteUrl,
   title: "Pet Shop São Francisco | Banho e Tosa em Taboão da Serra",
   description: "Banho, tosa e cuidados para pets no Parque Pinheiros, em Taboão da Serra. Solicite seu horário pelo WhatsApp.",
   openGraph: { title: "Pet Shop São Francisco", description: "Cuidado próximo para o seu pet em Taboão da Serra.", type: "website", locale: "pt_BR", images: ["/images/pets-sao-francisco-hero.png"] },
   twitter: { card: "summary_large_image", title: "Pet Shop São Francisco", description: "Banho e tosa em Taboão da Serra.", images: ["/images/pets-sao-francisco-hero.png"] },
-  alternates: siteUrl !== "http://localhost:3000" ? { canonical: "/" } : undefined,
+  alternates: !isLocalSiteUrl ? { canonical: "/" } : undefined,
   icons: { icon: "/icon.svg" },
 };
 
