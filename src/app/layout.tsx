@@ -10,14 +10,14 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-serif"
 export const metadata: Metadata = {
   metadataBase: siteUrl,
   title: "Pet Shop São Francisco | Banho e Tosa em Taboão da Serra",
-  description: "Banho, tosa e cuidados para pets no Parque Pinheiros, em Taboão da Serra. Solicite seu horário pelo WhatsApp.",
+  description: "Banho, tosa e cuidados para cachorros no Parque Pinheiros, em Taboão da Serra. Solicite seu horário pelo WhatsApp.",
   openGraph: { title: "Pet Shop São Francisco", description: "Cuidado próximo para o seu pet em Taboão da Serra.", type: "website", locale: "pt_BR", images: ["/images/pets-sao-francisco-hero.png"] },
   twitter: { card: "summary_large_image", title: "Pet Shop São Francisco", description: "Banho e tosa em Taboão da Serra.", images: ["/images/pets-sao-francisco-hero.png"] },
   alternates: !isLocalSiteUrl ? { canonical: "/" } : undefined,
-  icons: { icon: "/icon.svg" },
+  icons: { icon: "/icon.png" },
 };
 
-export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#f4aa18" };
+export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#145A63" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const jsonLd = { "@context": "https://schema.org", "@type": "PetStore", name: businessConfig.name, address: { "@type": "PostalAddress", streetAddress: "Rua Manoel Otaviano Diniz Junqueira Filho", addressLocality: "Taboão da Serra", addressRegion: "SP", postalCode: "06766-130", addressCountry: "BR" }, openingHoursSpecification: [{ "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], opens: "08:00", closes: "19:00" }], sameAs: [businessConfig.instagramUrl] };
